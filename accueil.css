@@ -59,8 +59,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-left: 100px;
-  justify-content: space-evenly
-  margin-top: 50px;
+  justify-content: space-evenly margin-top  50px;
   align-items: center;
 }
 
@@ -73,10 +72,10 @@ main {
   background-color: rgb(0, 0, 0);
   opacity: 0.6;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 100px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
-  cursor:crosshair;
+  cursor: crosshair;
 }
 
 #objectif {
@@ -88,10 +87,10 @@ main {
   background-color: black;
   opacity: 0.6;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 100px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
-  cursor:crosshair;
+  cursor: crosshair;
 }
 
 #presentation:hover,
@@ -100,12 +99,13 @@ main {
 #contact:hover {
   box-shadow: 10px 10px 10px 10px rgb(133, 235, 227);
   transition: box-shadow 0.3s ease;
+  transform: scale(1.1);
 }
 
 #ecole {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
@@ -114,16 +114,17 @@ main {
   background-color: rgb(0, 0, 0);
   opacity: 0.6;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 100px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
   margin-top: 30px;
-  cursor:crosshair;
+  cursor: crosshair;
 }
+
 #contact {
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
@@ -132,21 +133,24 @@ main {
   background-color: rgb(0, 0, 0);
   opacity: 0.6;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 100px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
   margin-top: 30px;
-  cursor:crosshair;
+  cursor: crosshair;
 }
+
 .liencontact {
   text-decoration: none;
   color: white;
   font-size: 15px;
 }
+
 .liencontact:hover {
   text-decoration: underline;
   color: rgb(133, 235, 227);
 }
+
 @media screen and (max-width:768px) {
   main {
     display: flex;
@@ -164,7 +168,7 @@ main {
     height: 350px;
     background-color: rgb(0, 0, 0, 0.4);
     opacity: 0.7;
-    padding: 10px;
+    padding-left: 10px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
   }
@@ -196,7 +200,8 @@ main {
     border-radius: 20px;
     box-shadow: 10px 10px 10px 10px rgb(255, 255, 255);
   }
-   #contact {
+
+  #contact {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
@@ -209,4 +214,12 @@ main {
     border-radius: 20px;
     box-shadow: 10px 10px 10px 10px rgb(255, 255, 255, 0.4);
   }
+}
+footer {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
