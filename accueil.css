@@ -4,6 +4,10 @@
   margin: 0;
   padding: 0;
 }
+/* ================= SCROLL SMOOTH ================= */
+html {
+  scroll-behavior: smooth;
+}
 
 /* ================= BODY ================= */
 body {
@@ -89,7 +93,7 @@ section,
 #objectif,
 #ecole,
 #contact,
-#veille {
+#veille,#parcours {
   width: 80%;
   max-width: 1000px;
   min-height: 220px;
@@ -107,7 +111,7 @@ section:hover,
 #objectif:hover,
 #ecole:hover,
 #contact:hover,
-#veille:hover {
+#veille:hover,#parcours:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 25px 60px rgba(133, 235, 227, 0.45);
 }
@@ -189,7 +193,7 @@ footer {
   #objectif,
   #ecole,
   #contact,
-  #veille {
+  #veille,#parcours {
     width: 95%;
     padding: 20px;
   }
