@@ -3,114 +3,196 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio Ziyed Ghazouani • Développeur Full‑Stack (PHP, C#, JavaScript)</title>
   <meta name="description"
-    content="Portfolio de Ziyed Ghazouani : projets web, applications, compétences en développement et design." />
-  <link rel="stylesheet" href="accueil.css">
+    content="Portfolio de Ziyed Ghazouani, développeur Full‑Stack (PHP, C#, JavaScript, PostgreSQL). Projets web, compétences, contact." />
+  <meta name="keywords" content="développeur full-stack, PHP, C#, JavaScript, PostgreSQL, portfolio, web, BTS SIO" />
+  <link rel="canonical" href="https://ton-domaine.fr/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Portfolio Ziyed Ghazouani – Développeur Full‑Stack" />
+  <meta property="og:description"
+    content="Portfolio de Ziyed Ghazouani : projets web, compétences en PHP, C#, JavaScript et PostgreSQL." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ton-domaine.fr/" />
+  <meta property="og:image" content="https://ton-domaine.fr/og-image.png" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio Ziyed Ghazouani – Développeur Full‑Stack" />
+  <meta name="twitter:description"
+    content="Portfolio de Ziyed Ghazouani : projets web, compétences en PHP, C#, JavaScript et PostgreSQL." />
+  <meta name="twitter:image" content="https://ton-domaine.fr/og-image.png" />
+
+  <!-- Bootstrap 5 + icônes -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  <title>Portfolio Ziyed Ghazouani</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="accueil.css">
+  <title>Portfolio – Ziyed Ghazouani</title>
   <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
 
 <body>
-  <header>
-    <h1>Ziyed Ghazouani</h1>
-    <ul class="navbar-nav">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#presentation">Menu</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#ecole">À propos de moi</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#contact">Me contacter</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Mes réseaux sociaux
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="https://www.linkedin.com/in/ziyed-ghazouani-26a295382/" class="dropdown-item">Linkedin</a></li> 
-      <li><a href="https://github.com/ziyedgzn" class="dropdown-item">Github</a></li>
-    </ul>
-  </li>
-</ul>
+  <header class="navbar navbar-expand-lg navbar-light bg-transparent sticky-top">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-bold" href="#">Ziyed Ghazouani</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <nav class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#presentation">Présentation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Réseaux</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="https://www.linkedin.com/in/ziyed-ghazouani-26a295382/">LinkedIn</a></li>
+              <li><a class="dropdown-item" href="https://github.com/ziyedgzn">GitHub</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div id="presentation">
-      <h2>Présentation</h2>
-      <h3>Actuellement élève en BTS SIO en 1ère année. J'ai décidé de m'orienter en option SLAM afin de devenir
-        développeur full-stack, ce qui me permettrait de faire parler ma créativité.</h3>
-      <h3>De plus je suis actuellement joueur et entraîneur dans le club de football de l'AS Fontaine d'Ouche, ce qui
-        me permet de développer des compétences en travail d'équipe.</h3>
-    </div>
+    <section id="hero" class="text-center text-white">
+      <div class="container">
+        <h1 class="display-5 fw-bold">Développeur Full‑Stack en devenir</h1>
+        <p class="lead mb-4">Étudiant en BTS SIO option SLAM, passionné par le web, les applications et la création d'interfaces
+          modernes.</p>
+        <a class="btn btn-primary btn-lg me-2" href="#projets">Mes projets</a>
+        <a class="btn btn-outline-light btn-lg" href="#contact">Me contacter</a>
+      </div>
+    </section>
 
-     <div id="parcours">
-      <h2>Parcours</h2>
-      <h3>Afin d'arriver à mon projet de développeur full-stack, le parcours idéal pour moi serait de continuer mes études
-        en licence professionnelle ou en école d'ingénieur en informatique après mon BTS SIO.</h3>
-      <h3>Par la suite, je souhaiterais intégrer une entreprise en tant que développeur web ou développeur d'applications afin de
-        mettre en pratique mes compétences et d'en acquérir de nouvelles.
-      </h3>
-    </div>
+    <section id="presentation" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Présentation</h2>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <p class="lead">Actuellement en 1ᵉʳ année de BTS SIO (option SLAM), je développe mes compétences en développement
+              web et mobile. Je cherche à m’améliorer en JavaScript, PHP, React, et à créer des expériences utilisateur
+              fluides.</p>
+            <p>À côté, je suis joueur et entraîneur au club de football AS Fontaine d'Ouche, ce qui m’a apporté de la rigueur
+              et un vrai esprit d’équipe.</p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="card glass-card">
+              <div class="card-body">
+                <h5 class="card-title">Parcours</h5>
+                <p class="card-text">BTS SIO option SLAM – Lycée privé Saint-Benigne (2025‑2027)</p>
+                <p class="card-text">Bac général 2025 – Lycée Le Castel (Mathématiques, SES, SVT)</p>
+                <p class="card-text">Loisirs : football, jeux vidéo, musique, veille tech.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="objectif">
-      <h2>Objectifs</h2>
-      <h3>Mes objectifs à court terme sont d'acquérir un maximum de connaissances en développement web et
-        d'applications, ce qui me permettra de pouvoir réaliser mes projets au sein d'une équipe ou tout seul.</h3>
-      <h3>Je souhaite pouvoir développer au plus vite et en apprendre toujours plus.</h3>
-    </div>
+    <section id="competences" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center">Compétences</h2>
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="card glass-card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-code-slash me-2"></i>Web</h5>
+                <p>HTML, CSS, JavaScript, C#, Bootstrap, responsive design, accessibilité.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card glass-card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-server me-2"></i>Backend</h5>
+                <p>PHP, PostgreSQL, APIs REST, gestion de base de données.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card glass-card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-lightbulb me-2"></i>Outils</h5>
+                <p>Git, VS Code, Figma, Docker, déploiement, veille technologique.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div id="ecole">
-      <h2>À propos de moi</h2>
-      <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Lycée Le Castel"
-        data-bs-content="Bac général 2025: Spécialités Mathématiques, Sciences Économiques et Sociales et Sciences de la Vie et de la Terre.">Lycée</button>
-      <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover"
-        data-bs-title="Lycée privé Saint-Benigne"
-        data-bs-content="Étudiant en BTS SIO option SLAM 2025-2027 (option développement d'applications et sites web).">Actuellement</button>
-      <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Mes loisirs"
-        data-bs-content="Football: actuellement joueur et entraîneur dans le club de football de l'AS Fontaine d'Ouche. Loisirs divers tels que les jeux-vidéos, la musique, le sport en général.">Loisirs</button>
-    </div>
+    <section id="projets" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center">Projets récents</h2>
+        <div class="row g-4 mt-3 justify-content-center">
+          <article class="col-md-6 col-lg-6">
+            <div class="card glass-card h-100">
+              <img src="imgportfolio.png" class="card-img-top" alt="Capture du portfolio" />
+              <div class="card-body">
+                <h3 class="card-title">Portfolio</h3>
+                <p class="card-text">Développement d’un site responsive avec animations CSS et formulaire de contact.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-sm btn-primary">Voir</a>
+              </div>
+            </div>
+          </article>
 
-    <div id="veille">
-      <h2>Veille Informatique</h2>
-      <h3>Je m'intéresse aux dernières technologies et tendances du développement web, des frameworks modernes, et des bonnes pratiques en cybersécurité. Je consulte régulièrement des blogs et podcasts pour rester à jour.</h3>
-    </div>
-    <div id="veille">
-      <h2>veille récente</h2>
-      <h3>Récemment le prix des barettes de RAM à énormément augmenté,la raison de cette augmentation est l'augmentation de l'utilisation de l'IA.</h3>
-      <h3>Les entreprises vendant des barettes de RAM ont décidé de vendre leurs articles en exclusivité aux entreprises spécialisées dans l'intelligence artificielle,ce qui signifie que il y a moins de barettes de RAM disponibles aux particuliers.</h3>
-      <a href="https://consomac.fr/news-22632-les-prix-de-la-ram-et-de-la-memoire-flash-explosent.html">Lire l'article</a>
-    </div>
-    <div id="contact">
-      <h2>Me contacter</h2>
-      <a href="mailto:ziyed.ghazouani@icloud.com" class="liencontact">
-        <img src="apple-mail-ios-removebg-preview.png" alt="logo" width="60"> : ziyed.ghazouani@icloud.com
-      </a>
-      <a href="tel:+33635555245" class="liencontact">
-        <img src="Phone_iOS.png" alt="logo" width="25"> : 06 35 55 52 45
-      </a>
-      <a href="https://wa.me/0635555245" class="liencontact">
-        <img src="whatsapp.png" alt="logo" width="40"> : Chat WhatsApp
-      </a>
-    </div>
+          <article class="col-md-6 col-lg-6">
+            <div class="card glass-card h-100">
+              <img src="imgloading.png" class="card-img-top" alt="Interface de Cyberquizz" />
+              <div class="card-body">
+                <h3 class="card-title">Application web (Cyberquizz)</h3>
+                <p class="card-text">Prototype d’appli full‑stack avec base de données et authentification.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-sm btn-primary">Voir</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="section-title text-center">Contact</h2>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-8">
+            <div class="card glass-card">
+              <div class="card-body text-center">
+                <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i>ziyed.ghazouani@icloud.com</p>
+                <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i>06 35 55 52 45</p>
+                <a href="https://wa.me/0635555245" class="btn btn-success">
+                  <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <h3>@Portfolio Ziyed Ghazouani - Tous droits réservés</h3>
+  <footer class="py-4 text-center text-white footer-bg">
+    <div class="container">
+      <small>@Portfolio Ziyed Ghazouani – Tous droits réservés</small>
+    </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-      const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el));
-    });
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
   </script>
 </body>
 

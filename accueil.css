@@ -11,14 +11,12 @@ html {
 
 /* ================= BODY ================= */
 body {
-  background-image: url('c38ff5df-d6e7-4567-81ae-5accce9800b5.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  line-height: 1.6;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, rgba(125, 211, 252, 0.20), transparent 55%),
+    linear-gradient(135deg, rgba(12, 18, 32, 0.95), rgba(8, 11, 22, 1));
+  color: var(--text);
+  overflow-x: hidden;
 }
 
 /* ================= HEADER ================= */
@@ -26,37 +24,33 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 18px 32px;
+  background: rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(125, 211, 252, 0.25);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-header h1 {
+header .navbar-brand {
   font-family: 'Verdana', sans-serif;
-  font-size: 36px;
-  letter-spacing: 2px;
-  color: #85ebe3;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--primary);
 }
 
-header nav a {
-  color: #fff;
-  font-weight: 500;
-  padding: 10px 16px;
+header .nav-link {
+  color: var(--text);
+  font-weight: 600;
+  padding: 10px 14px;
   border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
-header nav a:hover {
-  background: rgba(133, 235, 227, 0.2);
-  color: #85ebe3;
-  transform: scale(1.05);
+header .nav-link:hover {
+  background: rgba(125, 211, 252, 0.20);
+  color: var(--primary);
+  transform: translateY(-1px);
 }
 
 /* ================= TITRES ================= */
@@ -67,7 +61,7 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: #85ebe3;
+  color: var(--accent);
 }
 
 h3 {
@@ -83,8 +77,9 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin: 70px 0;
+  margin: 70px auto;
   padding: 0 20px;
+  max-width: 1120px;
 }
 
 /* ================= SECTIONS ================= */
@@ -93,17 +88,19 @@ section,
 #objectif,
 #ecole,
 #contact,
-#veille,#parcours {
-  width: 80%;
-  max-width: 1000px;
-  min-height: 220px;
-  padding: 30px;
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+#veille,
+#parcours {
+  width: 100%;
+  max-width: 980px;
+  min-height: 260px;
+  padding: 38px 30px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 32px var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 0 auto 60px;
 }
 
 section:hover,
@@ -112,8 +109,8 @@ section:hover,
 #ecole:hover,
 #contact:hover,
 #veille:hover,#parcours:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(133, 235, 227, 0.45);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(15, 23, 42, 0.2);
 }
 
 /* ================= ECOLE ================= */
@@ -176,33 +173,156 @@ footer {
   margin-top: 50px;
 }
 
+:root {
+  --bg: #0c1220;
+  --primary: #7dd3fc;      /* bleu clair */
+  --accent: #c4b5fd;       /* lavande */
+  --text: #f8fafc;         /* blanc cassé */
+  --muted: rgba(248, 250, 252, 0.85);
+
+  --card: rgba(255, 255, 255, 0.12);
+  --card-border: rgba(125, 211, 252, 0.35);
+  --shadow: rgba(0, 0, 0, 0.35);
+  --radius: 18px;
+}
+
 /* ================= RESPONSIVE ================= */
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 32px 24px;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+  main {
+    margin: 60px auto;
   }
 
-  header nav {
-    margin-left: 0;
+  .card {
+    min-height: auto;
   }
 
-  section,
-  #presentation,
-  #objectif,
-  #ecole,
-  #contact,
-  #veille,#parcours {
-    width: 95%;
-    padding: 20px;
+  .card-img-top {
+    max-height: 170px;
   }
 
-  h2 {
-    font-size: 20px;
+  #hero {
+    padding: 75px 0 60px;
   }
+}
 
-  h3 {
-    font-size: 15px;
-  }
+#hero {
+  padding: 90px 0 80px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.95), rgba(139, 92, 246, 0.9));
+  position: relative;
+  color: white;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('c38ff5df-d6e7-4567-81ae-5accce9800b5.JPG') center/cover no-repeat;
+  opacity: 0.35;
+  filter: blur(2px);
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+#hero h1 {
+  font-weight: 700;
+  max-width: 720px;
+  margin: 0 auto 1.2rem;
+  color: #f8fafc;
+}
+
+#hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: rgba(248, 250, 252, 0.9);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(125, 211, 252, 0.30);
+  box-shadow: 0 18px 40px var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55);
+}
+
+.card-img-top {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  max-height: 190px;
+  object-fit: cover;
+}
+
+.footer-bg {
+  background: rgba(255, 255, 255, 0.14);
+  border-top: 1px solid rgba(125, 211, 252, 0.22);
+  color: var(--text);
+}
+
+/* cartes compétence / projets */
+.card-body {
+  padding: 1.3rem 1.25rem;
+}
+
+.card-title {
+  color: var(--primary);
+}
+
+.card-text {
+  color: var(--muted);
+}
+
+/* contact : photo en fond */
+.contact-photo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 18px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: url("ma-photo.jpg") center/cover no-repeat;
+}
+
+.contact-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 18, 32, 0.4), rgba(12, 18, 32, 0.65));
+}
+
+/* bouton contact */
+.btn-success {
+  background: linear-gradient(135deg, #7dd3fc, #c4b5fd);
+  border: none;
+  color: #0b1220;
 }
